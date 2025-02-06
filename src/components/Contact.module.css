@@ -1,0 +1,52 @@
+.singleContact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    max-height: 100%;
+}
+
+.contactData {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+}
+
+.contactName {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.contactNumber {
+    margin: 0;
+}
+
+.userIcon,
+.phoneIcon {
+    padding-right: 4px;
+}
+
+.contactDeleteBtn {
+    display: flex;
+    padding: 5px;
+    margin: auto 15px;
+    border-radius: 3px;
+    border: 1px solid whitesmoke;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.contactDeleteBtn:hover,
+.contactDeleteBtn:focus {
+    border: 1px solid rgb(163, 3, 3);
+    background-color: lightcoral;
+    border-radius: 15px;
+    color: black;
+}
+

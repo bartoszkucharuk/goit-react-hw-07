@@ -1,0 +1,63 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    width: 400px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.requiredError {
+    margin-left: 4px;
+    color: red;
+}
+
+.formInput {
+    color: black;
+    width: 360px;
+    height: 30px;
+    margin: 0px;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    background-color:white;
+    box-sizing: border-box;
+}
+
+.formInput::placeholder {
+    padding: 4px;
+    color: rgb(153, 142, 142);
+}
+
+.formInput:focus,
+.formInput:hover {
+    border: 1px solid rgb(211, 83, 44);
+}
+
+.addContactBtn {
+    margin: 40px auto;
+    width: 360px;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.addContactBtn:hover,
+.addContactBtn:focus {
+    border: 1px solid blue;
+    background-color: lightblue;
+    color: black;
+    border-radius: 25px;
+}
