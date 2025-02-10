@@ -1,7 +1,7 @@
 import storage from 'redux-persist/lib/storage';// defaults to localStorage for web, more info https://www.npmjs.com/package/redux-persist
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from 'redux-persist';
-import { contactsReducer } from "./contactSlice";
+import { contactsReducer } from "./contactsSlice";
 import { filtersReducer } from "./filterSlice";
 
 

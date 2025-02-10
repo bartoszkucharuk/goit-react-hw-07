@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import styles from "./ContactForm.module.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { contactsSelector } from '../redux/selectors';
-import { addContact } from '../redux/contactSlice';
+import { addContact } from '../redux/contactsSlice';
 
 const ContactForm = () => {
   const nameFieldId = useId();
