@@ -6,11 +6,13 @@ import ContactList from "./components/ContactList";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from './redux/operations';
+import { getError, getIsLoading } from './redux/selectors';
 
 
 function App() {
   const dispatch = useDispatch();
-  const { items, isLoading, error } = useSelector(getContacts);
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -22,18 +24,8 @@ function App() {
       <h1>Phonebook <RiContactsBook3Line size="40" /></h1>
       <ContactForm />
       <SearchBox />
-      {loading && !error && (
-          <p>Please wait...</p>
-      )}
-      {error ? (
-          <p>{error}</p>
-      ) : contacts.length > 0 ? (
-        <ContactList />
-      ) : (
-        !loading && (
-            <p>You have no contacts yet</p>
-        )
-      )}
+       {isLoading && !error && <b>Request in progress...</b>}
+      <ContactList />
     </>
   )
 }

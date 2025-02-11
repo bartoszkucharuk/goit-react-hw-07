@@ -35,7 +35,7 @@ const contacts = useSelector(contactsSelector);
 
 //submitting new contact within form
 const handleSubmit = (values, actions) => {
-  const { number, name } = values;
+  const { name, number } = values;
 
 //find duplicates to valid database
   const duplicate = contacts.find(
