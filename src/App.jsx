@@ -24,8 +24,20 @@ function App() {
       <h1>Phonebook <RiContactsBook3Line size="40" /></h1>
       <ContactForm />
       <SearchBox />
-       {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && (
+        <b>Please wait...</b>
+      )}
+      
+      {error ? (
+          <b>{error}</b>
+      ) : contacts.length > 0
+        ? (
       <ContactList />
+      ) : (
+        !isLoading && (
+          <b>You have no contacts yet</b>
+        )
+      )}
     </>
   )
 }
